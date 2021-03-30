@@ -33,10 +33,18 @@ class MainViewController: UITableViewController {
 
         cell.textLabel?.text = clubs[indexPath.row]
         cell.imageView?.image = UIImage(named: clubs[indexPath.row])
+        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
+        cell.imageView?.clipsToBounds = true
+        cell.backgroundColor = UIColor.blue
 
         return cell
     }
    
+    // MARK: - Height
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
 
     
     // MARK: - Navigation

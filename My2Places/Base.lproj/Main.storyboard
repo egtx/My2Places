@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--English Premier League-->
         <scene sceneID="2OA-Ez-S5E">
             <objects>
                 <tableViewController id="6Eb-wM-37V" customClass="MainViewController" customModule="My2Places" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="6Eb-wM-37V" id="p3m-kG-5Z0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="X53-IF-Fs5"/>
+                    <navigationItem key="navigationItem" title="English Premier League" id="X53-IF-Fs5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Nv-x1-fWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,6 +43,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bSN-Qe-gqH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemTealColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                            <color key="textColor" red="0.25184682804126501" green="0.15583787895222986" blue="0.39416693652849744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="6Eb-wM-37V" kind="relationship" relationship="rootViewController" id="xoG-i0-6tI"/>
@@ -56,6 +61,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
