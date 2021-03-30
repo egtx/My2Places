@@ -28,14 +28,13 @@ class MainViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = clubs[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        cell.nameLabel.text = clubs[indexPath.row]
 
-        cell.textLabel?.text = clubs[indexPath.row]
-        cell.imageView?.image = UIImage(named: clubs[indexPath.row])
-        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
-        cell.imageView?.clipsToBounds = true
-        cell.backgroundColor = UIColor.blue
+        cell.nameLabel.text = clubs[indexPath.row]
+        cell.imageOfLogo.image = UIImage(named: clubs[indexPath.row])
+        cell.imageOfLogo.layer.cornerRadius = cell.imageOfLogo.frame.size.height / 2
+        cell.imageOfLogo.clipsToBounds = true
 
         return cell
     }

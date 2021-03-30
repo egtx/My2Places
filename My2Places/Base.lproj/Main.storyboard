@@ -11,18 +11,74 @@
         <scene sceneID="2OA-Ez-S5E">
             <objects>
                 <tableViewController id="6Eb-wM-37V" customClass="MainViewController" customModule="My2Places" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8RS-As-WsY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8RS-As-WsY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="OMs-Vb-Q1D">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="OMs-Vb-Q1D" customClass="CustomTableViewCell" customModule="My2Places" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OMs-Vb-Q1D" id="LIG-rE-gIO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pak-Tz-oAp">
+                                            <rect key="frame" x="15" y="10" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="AaZ-qn-F5H"/>
+                                                <constraint firstAttribute="height" constant="65" id="KRq-4d-rbJ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joB-Nd-PbF">
+                                            <rect key="frame" x="95" y="9" width="304" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="t51-4R-gGY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIM-Cv-Syn">
+                                            <rect key="frame" x="95" y="35" width="314" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="2va-bb-Ipn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3f-pk-3cq">
+                                            <rect key="frame" x="95" y="54" width="304" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Vt4-LE-yG8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="joB-Nd-PbF" firstAttribute="leading" secondItem="Pak-Tz-oAp" secondAttribute="trailing" constant="15" id="1UK-e9-BBp"/>
+                                        <constraint firstItem="Q3f-pk-3cq" firstAttribute="top" secondItem="PIM-Cv-Syn" secondAttribute="bottom" constant="1" id="3ud-2p-P6j"/>
+                                        <constraint firstAttribute="trailing" secondItem="joB-Nd-PbF" secondAttribute="trailing" constant="15" id="7Ut-8Z-WOf"/>
+                                        <constraint firstItem="PIM-Cv-Syn" firstAttribute="trailing" secondItem="LIG-rE-gIO" secondAttribute="trailingMargin" constant="15" id="HxD-cz-qIt"/>
+                                        <constraint firstItem="Q3f-pk-3cq" firstAttribute="leading" secondItem="Pak-Tz-oAp" secondAttribute="trailing" constant="15" id="MO3-Gj-UMU"/>
+                                        <constraint firstItem="joB-Nd-PbF" firstAttribute="top" secondItem="LIG-rE-gIO" secondAttribute="top" constant="9" id="TDg-XO-0fw"/>
+                                        <constraint firstAttribute="bottom" secondItem="Q3f-pk-3cq" secondAttribute="bottom" constant="10" id="U8C-RI-uwJ"/>
+                                        <constraint firstItem="Pak-Tz-oAp" firstAttribute="centerY" secondItem="LIG-rE-gIO" secondAttribute="centerY" id="ZyY-ey-lTZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Q3f-pk-3cq" secondAttribute="trailing" constant="15" id="cW0-Qw-q7u"/>
+                                        <constraint firstItem="PIM-Cv-Syn" firstAttribute="top" secondItem="joB-Nd-PbF" secondAttribute="bottom" constant="5" id="d7Q-yB-Qsx"/>
+                                        <constraint firstItem="PIM-Cv-Syn" firstAttribute="leading" secondItem="Pak-Tz-oAp" secondAttribute="trailing" constant="15" id="mma-Jd-fFe"/>
+                                        <constraint firstItem="Pak-Tz-oAp" firstAttribute="leading" secondItem="LIG-rE-gIO" secondAttribute="leading" constant="15" id="wWu-lS-8Sw"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfLogo" destination="Pak-Tz-oAp" id="0ud-uH-Vvq"/>
+                                    <outlet property="locationLabel" destination="PIM-Cv-Syn" id="exD-71-3an"/>
+                                    <outlet property="nameLabel" destination="joB-Nd-PbF" id="EES-BA-QY4"/>
+                                    <outlet property="yearLabel" destination="Q3f-pk-3cq" id="qha-yF-KBW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,7 +90,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Nv-x1-fWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204" y="70"/>
+            <point key="canvasLocation" x="202.89855072463769" y="69.642857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IXB-fZ-zc4">
