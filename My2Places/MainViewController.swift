@@ -9,8 +9,8 @@ import UIKit
 
 class MainViewController: UITableViewController {
 
-    let clubs = ["Tottenham", "Man United", "Man City", "Chelsea", "Arsenal",
-    "Liverpool", "Everton", "West Ham", "Leicester", "Wolverhampton"]
+  
+    var clubs = Club.getClubs()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,21 +29,17 @@ class MainViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-        cell.nameLabel.text = clubs[indexPath.row]
 
-        cell.nameLabel.text = clubs[indexPath.row]
-        cell.imageOfLogo.image = UIImage(named: clubs[indexPath.row])
+        cell.nameLabel.text = clubs[indexPath.row].name
+        cell.locationLabel.text = clubs[indexPath.row].location
+        cell.yearLabel.text = clubs[indexPath.row].year
+        cell.imageOfLogo.image = UIImage(named: clubs[indexPath.row].image)
         cell.imageOfLogo.layer.cornerRadius = cell.imageOfLogo.frame.size.height / 2
         cell.imageOfLogo.clipsToBounds = true
 
         return cell
     }
    
-    // MARK: - Height
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
-    }
 
     
     // MARK: - Navigation
@@ -54,5 +50,6 @@ class MainViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     
-
+    @IBAction func cancelAction(_ segue: UIStoryboardSegue){}
+    
 }
